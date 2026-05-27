@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { projects } from '../../data/portfolioData';
 import './Projects.css';
 
-const categories = ['All', 'AI', 'Full Stack', 'IoT'];
+const categories = ['All', 'DSA', 'Full Stack', 'Frontend'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -90,31 +90,18 @@ export default function Projects() {
                 {project.category}
               </span>
 
-              {project.featured && (
-                <span className="project-featured-badge">⭐ Featured</span>
-              )}
 
               {/* Content */}
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
 
-              {/* Highlights */}
-              <div className="project-highlights">
-                {project.highlights.map(h => (
+              {/* Tech Stack */}
+              <div className="project-tech">
+                {project.tech.map(h => (
                   <span key={h} className="highlight-tag">
                     <span className="highlight-check">✓</span> {h}
                   </span>
                 ))}
-              </div>
-
-              {/* Tech Stack */}
-              <div className="project-tech">
-                {project.tech.slice(0, 4).map(tech => (
-                  <span key={tech} className="tech-pill">{tech}</span>
-                ))}
-                {project.tech.length > 4 && (
-                  <span className="tech-pill-more">+{project.tech.length - 4}</span>
-                )}
               </div>
 
               {/* Hover gradient bar */}

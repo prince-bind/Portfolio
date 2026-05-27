@@ -182,6 +182,7 @@ body {
   opacity: 0;
   transition: var(--transition-base);
   border-radius: inherit;
+  pointer-events: none;
 }
 
 .card:hover {
