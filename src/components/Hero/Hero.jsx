@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { personalInfo, stats } from '../../data/portfolioData';
+import { personalInfo } from '../../data/portfolioData';
 import './Hero.css';
 
 const roles = [
